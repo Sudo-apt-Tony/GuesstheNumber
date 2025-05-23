@@ -1,3 +1,9 @@
+/*
+* Guess the Number - Learning the rand library
+* Creator: Anthony Smyth
+* Version: v0.1.1
+* */
+
 use std::io;
 use std::cmp::Ordering;
 use rand::Rng;
@@ -17,9 +23,8 @@ fn main() {
     let difficulty: u32 = difficulty
         .trim()
         .parse()
-        .expect("Please choose a difficulty from the list provided, numbered 1-3.");
+        .expect("Please choose a difficulty from the list provided, numbers 1-3.");
 
-    //let diff_setting: [i32, 3] = [1, 2, 3]; // I don't remember why I needed this
     let sec_num: u32;
 
     match difficulty {
@@ -31,10 +36,6 @@ fn main() {
             return;
         }
     }
-
-    //let sec_num = rand::rng()
-    //    .random_range(1..=100);
-
 
     loop {
         println!("Please input your guess: ");
